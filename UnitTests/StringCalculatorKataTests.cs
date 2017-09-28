@@ -29,6 +29,14 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void Minus2Test()
+        {
+            String s = "-10-5";
+
+            Assert.AreEqual(-15, sck.Calculator(s));
+        }
+
+        [TestMethod]
         public void MinusAndPlusTest()
         {
             String s = "7-5+2";

@@ -36,7 +36,12 @@ namespace String_Calculator_Kata
         private int Minus(String s)
         {
             String[] data = s.Split('-');
-            int ergebnis = Int32.Parse(data[0]);
+            int ergebnis = 0;
+            if (data[0] != "")
+            {
+               ergebnis = Int32.Parse(data[0]);
+            }
+            
             int wert = 0;
             Regex r = new Regex(".*[+-]+.*");
             
@@ -66,8 +71,12 @@ namespace String_Calculator_Kata
 
             for (int i = 0; i < data.Length; i++)
             {
-                
-                if (r.Match(data[i]).Success)
+
+                if (data[i]== "")
+                {
+                    continue;
+
+                } else if (r.Match(data[i]).Success)
                 {
                     wert = Calculator(data[i]);
                 }
