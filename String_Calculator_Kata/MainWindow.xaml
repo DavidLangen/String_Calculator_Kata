@@ -1,11 +1,11 @@
-﻿<Window x:Class="String_Calculator_Kata.MainWindow"
+﻿<Window x:Name="w_fenster" x:Class="String_Calculator_Kata.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:String_Calculator_Kata"
         mc:Ignorable="d"
-        Title="String Calculator Kata" Height="340.85" Width="424.346">
+        Title="String Calculator Kata" Height="340.85" Width="424.346" Loaded="w_fenster_Loaded">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF6C7DA2" Offset="0.963"/>
@@ -14,7 +14,7 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <Button x:Name="btn_berechnen" Content="Berechnen" HorizontalAlignment="Left" Height="45" Margin="29,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18">
+        <Button x:Name="btn_berechnen" Content="Berechnen" HorizontalAlignment="Left" Height="45" Margin="29,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_berechnen_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -26,7 +26,7 @@
         </Button>
         <Label x:Name="lbl_String" Content="String:" HorizontalAlignment="Left" Height="37" Margin="29,52,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
         <TextBox x:Name="tbx_string_eingabe" HorizontalAlignment="Left" Height="37" Margin="115,52,0,0" TextWrapping="Wrap" Text=""   VerticalAlignment="Top" Width="252" Background="#FF6B9E7E" FontSize="18"/>
-        <Button x:Name="btn_schließen" Content="Schließen" HorizontalAlignment="Left" Height="45" Margin="205,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18">
+        <Button x:Name="btn_schließen" Content="Schließen" HorizontalAlignment="Left" Height="45" Margin="205,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_schließen_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
