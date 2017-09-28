@@ -28,11 +28,27 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void MinusAndPlusTest()
+        {
+            String s = "7-5+2";
+
+            Assert.AreEqual(4, sck.Calculator(s));
+        }
+
+        [TestMethod]
         public void NegativeValueTest()
         {
             String s = "3-5";
 
             Assert.AreEqual(-2, sck.Calculator(s));
+        }
+
+        [TestMethod]
+        public void NoneNumbereTest()
+        {
+            String s = "Gsd-lsk";
+
+            Assert.AreEqual(0, sck.Calculator(s));
         }
 
         [TestMethod]
@@ -42,6 +58,7 @@ namespace UnitTests
     
             Assert.AreEqual(0, sck.Calculator(s));
         }
+
 
 
     }

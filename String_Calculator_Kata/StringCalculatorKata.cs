@@ -17,6 +17,11 @@ namespace String_Calculator_Kata
 
         public int Calculator(String s)
         {
+            if(s == "")
+            {
+                return 0;
+            }
+
             if (s.Contains("+"))
             {
                 return Plus(s);
