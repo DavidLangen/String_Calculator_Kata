@@ -20,7 +20,7 @@ namespace String_Calculator_Kata
         {
             Regex r = new Regex("^([0-9]*[+-][0-9]*)+$");
             Match m = r.Match(s);
-            if(s == "" || !m.Success)
+            if (s == "" || !m.Success)
             {
                 return 0;
             }
@@ -39,12 +39,12 @@ namespace String_Calculator_Kata
             int ergebnis = 0;
             if (data[0] != "")
             {
-               ergebnis = Int32.Parse(data[0]);
+                ergebnis = Int32.Parse(data[0]);
             }
-            
+
             int wert = 0;
             Regex r = new Regex(".*[+-]+.*");
-            
+
             for (int i = 1; i < data.Length; i++)
             {
                 if (r.Match(data[i]).Success)
@@ -56,7 +56,7 @@ namespace String_Calculator_Kata
                     wert = Int32.Parse(data[i]);
                 }
                 ergebnis -= wert;
-               
+
             }
 
             return ergebnis;
@@ -72,7 +72,7 @@ namespace String_Calculator_Kata
             for (int i = 0; i < data.Length; i++)
             {
 
-                if (data[i]== "")
+                if (data[i] == "")
                 {
                     continue;
 
@@ -83,7 +83,7 @@ namespace String_Calculator_Kata
                 else
                 {
                     wert = Int32.Parse(data[i]);
-                } 
+                }
 
                 ergebnis += wert;
             }
@@ -96,9 +96,13 @@ namespace String_Calculator_Kata
             _berechnungen.Add(c);
         }
 
+        public List<string> Berechnungen {
+            get => _berechnungen;
+        }
+
         public String LastCalculation()
         {
-            return _berechnungen.Last();
+            return Berechnungen.Last();
         }
     }
 }

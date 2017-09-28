@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:String_Calculator_Kata"
         mc:Ignorable="d"
-        Title="String Calculator Kata" Height="340.85" Width="424.346" Loaded="w_fenster_Loaded">
+        Title="String Calculator Kata" Height="375.164" Width="632.516" Loaded="w_fenster_Loaded">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF6C7DA2" Offset="0.963"/>
@@ -14,7 +14,7 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <Button x:Name="btn_berechnen" Content="Berechnen" HorizontalAlignment="Left" Height="45" Margin="29,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_berechnen_Click">
+        <Button x:Name="btn_berechnen" Content="Berechnen" HorizontalAlignment="Left" Height="45" Margin="29,256,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_berechnen_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -24,9 +24,9 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_String" Content="String:" HorizontalAlignment="Left" Height="37" Margin="29,52,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
-        <TextBox x:Name="tbx_string_eingabe" HorizontalAlignment="Left" Height="37" Margin="115,52,0,0" TextWrapping="Wrap" Text=""   VerticalAlignment="Top" Width="252" Background="#FF6B9E7E" FontSize="18"/>
-        <Button x:Name="btn_schließen" Content="Schließen" HorizontalAlignment="Left" Height="45" Margin="205,224,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_schließen_Click">
+        <Label x:Name="lbl_String" Content="String:" HorizontalAlignment="Left" Height="37" Margin="29,81,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
+        <TextBox x:Name="tbx_string_eingabe" HorizontalAlignment="Left" Height="37" Margin="115,81,0,0" TextWrapping="Wrap" Text=""   VerticalAlignment="Top" Width="252" Background="#FF6B9E7E" FontSize="18"/>
+        <Button x:Name="btn_schließen" Content="Schließen" HorizontalAlignment="Left" Height="45" Margin="205,256,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_schließen_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -36,8 +36,10 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_ergebnis" Content="Ergebnis:" HorizontalAlignment="Left" Height="37" Margin="29,115,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
-        <Label x:Name="lbl_ergebnis_ausgabe" Content="0" HorizontalAlignment="Left" Height="37" Margin="115,115,0,0" VerticalAlignment="Top" Width="252" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_ergebnis" Content="Ergebnis:" HorizontalAlignment="Left" Height="37" Margin="29,144,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
+        <Label x:Name="lbl_ergebnis_ausgabe" Content="0" HorizontalAlignment="Left" Height="37" Margin="115,144,0,0" VerticalAlignment="Top" Width="252" FontSize="18" HorizontalContentAlignment="Center"/>
+        <ListBox x:Name="lbx_berechnungen" HorizontalAlignment="Left" Height="308" Margin="391,37,0,0" VerticalAlignment="Top" Width="234" Background="#FFCEEEB9" FontSize="18"/>
+        <Label x:Name="lbl_berechnungen" Content="Berechnungen:" HorizontalAlignment="Left" Height="37" Margin="391,0,0,0" VerticalAlignment="Top" Width="234" FontSize="18" HorizontalContentAlignment="Center" Background="#FF4B4B4B"/>
 
     </Grid>
 </Window>

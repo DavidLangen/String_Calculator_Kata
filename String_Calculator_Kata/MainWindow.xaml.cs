@@ -37,10 +37,15 @@ namespace String_Calculator_Kata
             String eingabe = tbx_string_eingabe.Text;
 
             tbx_string_eingabe.Text = "";
+            lbl_ergebnis_ausgabe.Content = "" + 0;
 
             int ergebnis = sck.Calculator(eingabe);
 
-            lbl_ergebnis_ausgabe.Content = "" + ergebnis;
+            lbl_ergebnis_ausgabe.Content = eingabe+"="+ergebnis;
+            
+            sck.AddCalculation(eingabe+"="+ergebnis);
+
+            lbx_berechnungen.Items.Add(eingabe + "=" + ergebnis);
         }
 
         private void btn_schließen_Click(object sender, RoutedEventArgs e)
