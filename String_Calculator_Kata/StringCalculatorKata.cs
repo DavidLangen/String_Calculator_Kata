@@ -42,7 +42,6 @@ namespace String_Calculator_Kata
             
             for (int i = 1; i < data.Length; i++)
             {
-                
                 if (r.Match(data[i]).Success)
                 {
                     wert = Calculator(data[i]);

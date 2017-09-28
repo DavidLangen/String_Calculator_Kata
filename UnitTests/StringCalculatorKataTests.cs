@@ -12,6 +12,7 @@ namespace UnitTests
     public class StringCalculatorKataTests
     {
         private StringCalculatorKata sck = new StringCalculatorKata();
+
         [TestMethod]
         public void PlusTest()
         {
@@ -33,6 +34,15 @@ namespace UnitTests
             String s = "7-5+2";
 
             Assert.AreEqual(4, sck.Calculator(s));
+        }
+
+        [TestMethod]
+        public void StartsWithOperator()
+        {
+            String s1 = "-9-3+2";
+            String s2 = "+9-3+2";
+            Assert.AreEqual(-10, sck.Calculator(s1));
+            Assert.AreEqual(8, sck.Calculator(s2));
         }
 
         [TestMethod]
