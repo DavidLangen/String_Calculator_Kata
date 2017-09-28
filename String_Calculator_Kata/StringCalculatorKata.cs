@@ -37,10 +37,22 @@ namespace String_Calculator_Kata
         {
             String[] data = s.Split('-');
             int ergebnis = Int32.Parse(data[0]);
-
+            int wert = 0;
+            Regex r = new Regex(".*[+-]+.*");
+            
             for (int i = 1; i < data.Length; i++)
             {
-                ergebnis -= Int32.Parse(data[i]);
+                
+                if (r.Match(data[i]).Success)
+                {
+                    wert = Calculator(data[i]);
+                }
+                else
+                {
+                    wert = Int32.Parse(data[i]);
+                }
+                ergebnis -= wert;
+               
             }
 
             return ergebnis;
@@ -50,10 +62,22 @@ namespace String_Calculator_Kata
         {
             String[] data = s.Split('+');
             int ergebnis = 0;
+            int wert = 0;
+            Regex r = new Regex(".*[+-]+.*");
 
             for (int i = 0; i < data.Length; i++)
             {
-                ergebnis += Int32.Parse(data[i]);
+                
+                if (r.Match(data[i]).Success)
+                {
+                    wert = Calculator(data[i]);
+                }
+                else
+                {
+                    wert = Int32.Parse(data[i]);
+                } 
+
+                ergebnis += wert;
             }
 
             return ergebnis;
