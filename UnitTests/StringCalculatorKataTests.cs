@@ -21,6 +21,13 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void Plus2Test()
+        {
+            String s = "+1+7";
+            Assert.AreEqual(8, sck.Calculator(s));
+        }
+
+        [TestMethod]
         public void MinusTest()
         {
             String s = "10-5";
@@ -74,6 +81,22 @@ namespace UnitTests
         {
             String s = "";
     
+            Assert.AreEqual(0, sck.Calculator(s));
+        }
+
+        [TestMethod]
+        public void OnlyNumberTest()
+        {
+            String s = "12";
+
+            Assert.AreEqual(12, sck.Calculator(s));
+        }
+
+        [TestMethod]
+        public void DoubleOperatorTest()
+        {
+            String s = "12++13";
+
             Assert.AreEqual(0, sck.Calculator(s));
         }
 
