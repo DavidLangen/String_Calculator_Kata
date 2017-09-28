@@ -17,7 +17,7 @@ namespace String_Calculator_Kata
 
         public int Calculator(String s)
         {
-            if (s.Contains("\\+"))
+            if (s.Contains("+"))
             {
                 return Plus(s);
             }
@@ -27,12 +27,23 @@ namespace String_Calculator_Kata
 
         private int Minus(String s)
         {
-            return 0;
+            String[] data = s.Split('-');
+            int ergebnis = 0;
+
+            return ergebnis;
         }
 
         private int Plus(String s)
         {
-            return 0;
+            String[] data = s.Split('+');
+            int ergebnis = 0;
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                ergebnis += Int32.Parse(data[i]);
+            }
+
+            return ergebnis;
         }
     }
 }
