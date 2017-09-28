@@ -96,13 +96,9 @@ namespace String_Calculator_Kata
             _berechnungen.Add(c);
         }
 
-        public List<string> Berechnungen {
-            get => _berechnungen;
-        }
-
         public String LastCalculation()
         {
-            return Berechnungen.Last();
+            return _berechnungen.Last();
         }
     }
 }

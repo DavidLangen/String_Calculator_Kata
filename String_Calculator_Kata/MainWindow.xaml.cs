@@ -35,17 +35,17 @@ namespace String_Calculator_Kata
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
             String eingabe = tbx_string_eingabe.Text;
-
-            tbx_string_eingabe.Text = "";
-            lbl_ergebnis_ausgabe.Content = "" + 0;
-
             int ergebnis = sck.Calculator(eingabe);
 
-            lbl_ergebnis_ausgabe.Content = eingabe+"="+ergebnis;
-            
-            sck.AddCalculation(eingabe+"="+ergebnis);
+            String berechnung = eingabe + "=" + ergebnis;
 
-            lbx_berechnungen.Items.Add(eingabe + "=" + ergebnis);
+            tbx_string_eingabe.Text = "";
+
+            lbl_ergebnis_ausgabe.Content = berechnung;
+            
+            sck.AddCalculation(berechnung);
+
+            lbx_berechnungen.Items.Add(sck.LastCalculation());
         }
 
         private void btn_schließen_Click(object sender, RoutedEventArgs e)
