@@ -18,9 +18,10 @@ namespace String_Calculator_Kata
 
         public int Calculator(String s)
         {
-            Regex r = new Regex("^([0-9]*[+-][0-9]*)+$");
+            Regex r = new Regex("^([0-9]?[+-]?[0-9]?)+$");
+            Regex r2 = new Regex(".*[+-][+-].*");
             Match m = r.Match(s);
-            if (s == "" || !m.Success)
+            if (s == "" || !m.Success || r2.Match(s).Success)
             {
                 return 0;
             }

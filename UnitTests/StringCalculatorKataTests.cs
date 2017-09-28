@@ -88,8 +88,9 @@ namespace UnitTests
         public void OnlyNumberTest()
         {
             String s = "12";
-
+            String s2 = "9";
             Assert.AreEqual(12, sck.Calculator(s));
+            Assert.AreEqual(9, sck.Calculator(s2));
         }
 
         [TestMethod]
