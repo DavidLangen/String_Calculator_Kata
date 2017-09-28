@@ -90,5 +90,15 @@ namespace String_Calculator_Kata
 
             return ergebnis;
         }
+
+        public void AddCalculation(String c)
+        {
+            _berechnungen.Add(c);
+        }
+
+        public String LastCalculation()
+        {
+            return _berechnungen.Last();
+        }
     }
 }
