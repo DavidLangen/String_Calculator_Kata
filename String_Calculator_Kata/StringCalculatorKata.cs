@@ -28,7 +28,12 @@ namespace String_Calculator_Kata
         private int Minus(String s)
         {
             String[] data = s.Split('-');
-            int ergebnis = 0;
+            int ergebnis = Int32.Parse(data[0]);
+
+            for (int i = 1; i < data.Length; i++)
+            {
+                ergebnis -= Int32.Parse(data[i]);
+            }
 
             return ergebnis;
         }
