@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace String_Calculator_Kata
 {
-    class StringCalculatorKata
+    public class StringCalculatorKata
     {
         private List<String> _berechnungen;
 
@@ -15,22 +15,22 @@ namespace String_Calculator_Kata
             _berechnungen = new List<String>();
         }
 
-        public int calculator(String s)
+        public int Calculator(String s)
         {
             if (s.Contains("\\+"))
             {
-                return plus(s);
+                return Plus(s);
             }
 
-            return minus(s);
+            return Minus(s);
         }
 
-        private int minus(String s)
+        private int Minus(String s)
         {
             return 0;
         }
 
-        private int plus(String s)
+        private int Plus(String s)
         {
             return 0;
         }
