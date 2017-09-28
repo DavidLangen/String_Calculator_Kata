@@ -17,17 +17,20 @@ namespace String_Calculator_Kata
 
         public int calculator(String s)
         {
-            
+            if (s.Contains("\\+"))
+            {
+                return plus(s);
+            }
 
-            return 0;
+            return minus(s);
         }
 
-        private int minus()
+        private int minus(String s)
         {
             return 0;
         }
 
-        private int plus()
+        private int plus(String s)
         {
             return 0;
         }
