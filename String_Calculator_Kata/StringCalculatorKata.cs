@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace String_Calculator_Kata
@@ -17,7 +18,9 @@ namespace String_Calculator_Kata
 
         public int Calculator(String s)
         {
-            if(s == "")
+            Regex r = new Regex("^([0-9]*[+-][0-9]*)+$");
+            Match m = r.Match(s);
+            if(s == "" || !m.Success)
             {
                 return 0;
             }
