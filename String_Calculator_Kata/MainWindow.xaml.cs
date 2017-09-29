@@ -53,5 +53,13 @@ namespace String_Calculator_Kata
             w_fenster.Close();
         }
 
+        private void lbx_berechnungen_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            String berechnung = lbx_berechnungen.SelectedItem.ToString();
+            String[] gleichung = berechnung.Split('=');
+
+            tbx_string_eingabe.Text = gleichung[0];
+            lbl_ergebnis_ausgabe.Content = berechnung;
+        }
     }
 }

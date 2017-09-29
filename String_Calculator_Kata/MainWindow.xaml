@@ -38,7 +38,7 @@
         </Button>
         <Label x:Name="lbl_ergebnis" Content="Ergebnis:" HorizontalAlignment="Left" Height="37" Margin="29,144,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
         <Label x:Name="lbl_ergebnis_ausgabe" Content="0" HorizontalAlignment="Left" Height="37" Margin="115,144,0,0" VerticalAlignment="Top" Width="252" FontSize="18" HorizontalContentAlignment="Center"/>
-        <ListBox x:Name="lbx_berechnungen" HorizontalAlignment="Left" Height="308" Margin="391,37,0,0" VerticalAlignment="Top" Width="234" Background="#FFCEEEB9" FontSize="18"/>
+        <ListBox x:Name="lbx_berechnungen" HorizontalAlignment="Left" Height="308" Margin="391,37,0,0" VerticalAlignment="Top" Width="234" Background="#FFCEEEB9" FontSize="18" MouseDoubleClick="lbx_berechnungen_MouseDoubleClick"/>
         <Label x:Name="lbl_berechnungen" Content="Berechnungen:" HorizontalAlignment="Left" Height="37" Margin="391,0,0,0" VerticalAlignment="Top" Width="234" FontSize="18" HorizontalContentAlignment="Center" Background="#FF4B4B4B"/>
 
     </Grid>
