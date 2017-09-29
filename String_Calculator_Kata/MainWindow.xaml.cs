@@ -34,18 +34,7 @@ namespace String_Calculator_Kata
 
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
-            String eingabe = tbx_string_eingabe.Text;
-            int ergebnis = sck.Calculator(eingabe);
-
-            String berechnung = eingabe + "=" + ergebnis;
-
-            tbx_string_eingabe.Text = "";
-
-            lbl_ergebnis_ausgabe.Content = berechnung;
-            
-            sck.AddCalculation(berechnung);
-
-            lbx_berechnungen.Items.Add(sck.LastCalculation());
+            Berechnen();
         }
 
         private void btn_schließen_Click(object sender, RoutedEventArgs e)
@@ -60,6 +49,30 @@ namespace String_Calculator_Kata
 
             tbx_string_eingabe.Text = gleichung[0];
             lbl_ergebnis_ausgabe.Content = berechnung;
+        }
+
+        private void tbx_string_eingabe_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Berechnen();
+            }
+        }
+
+        private void Berechnen()
+        {
+            String eingabe = tbx_string_eingabe.Text;
+            int ergebnis = sck.Calculator(eingabe);
+
+            String berechnung = eingabe + "=" + ergebnis;
+
+            tbx_string_eingabe.Text = "";
+
+            lbl_ergebnis_ausgabe.Content = berechnung;
+
+            sck.AddCalculation(berechnung);
+
+            lbx_berechnungen.Items.Add(sck.LastCalculation());
         }
     }
 }

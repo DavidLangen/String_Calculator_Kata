@@ -25,7 +25,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_String" Content="String:" HorizontalAlignment="Left" Height="37" Margin="29,81,0,0" VerticalAlignment="Top" Width="81" FontSize="18"/>
-        <TextBox x:Name="tbx_string_eingabe" HorizontalAlignment="Left" Height="37" Margin="115,81,0,0" TextWrapping="Wrap" Text=""   VerticalAlignment="Top" Width="252" Background="#FF6B9E7E" FontSize="18"/>
+        <TextBox x:Name="tbx_string_eingabe" HorizontalAlignment="Left" Height="37" Margin="115,81,0,0" TextWrapping="Wrap" Text=""   VerticalAlignment="Top" Width="252" Background="#FF6B9E7E" FontSize="18" KeyDown="tbx_string_eingabe_KeyDown"/>
         <Button x:Name="btn_schließen" Content="Schließen" HorizontalAlignment="Left" Height="45" Margin="205,256,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="-0.159,0.304" FontSize="18" Click="btn_schließen_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
